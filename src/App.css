@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Header styles */
+header {
+  display: right;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Reduced padding for a smaller header */
+  background-color: #4b5dff;
+  color: white;
+  position: relative; /* Ensure the nav is positioned correctly */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+  margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Link styles with transition and hover effect */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Add active link color for current page */
+nav ul li a.active-link {
+  color: #32cd32; /* Active link color - green */
+  transition: color 0.3s ease;
+}
+
+/* Main Content styles */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+  gap: 20px; /* Space between boxes */
+  padding: 20px;
+}
+
+.header {
+  color: black;
+  text-align: left;
+  margin-left: 285px;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #6f7072;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 5px; /* Space between box and label */
+}
+
+.box-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.box-label {
+  color: #333; /* Label color */
+  text-align: center;
+  margin-top: 10px; /* Space between box and title */
+}
+
+/* Star rating CSS */
+.stars {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.star {
+  font-size: 24px;
+  color: #ccc; /* Default star color */
+  transition: color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.star.filled {
+  color: rgb(255, 119, 0); /* Filled star color */
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: rgb(255, 119, 0); /* Hover color */
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #4b5dff;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
